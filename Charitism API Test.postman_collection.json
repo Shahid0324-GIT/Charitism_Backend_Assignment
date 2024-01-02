@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "503eda6b-ec82-4ae7-81e6-b97118ecac2b",
+		"name": "Charitism API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26521674"
+	},
+	"item": [
+		{
+			"name": "Charitism Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Shahid\",\r\n    \"password\": \"Shahid123\",\r\n    \"email\" : \"shahid@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example Request For Creating a New User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Jane Doe\",\r\n    \"password\": \"janedoe123\",\r\n    \"email\": \"janedoe@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-6/nH/bcA+sJg8Nc/c5C9bgr6O+M\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 12:20:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"John Doe\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQxOTgwMjUsImV4cCI6MTcwNDI4NDQyNX0.F6K3mcffb4pewxomQlVVE4AOHDOOvR1n4StMX1IviIk\",\n    \"email\": \"johndoe@mail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Charitism Login API test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTNjYWJmMWVjYjdjMjc5MjNmNjYxMyIsImlhdCI6MTcwNDE5MDE0MCwiZXhwIjoxNzA0Mjc2NTQwfQ.Qyzke7oL7Yrl7bTfB5zwUQek3hDMVAvVCSjNwaMylbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Khalid123\",\r\n    \"email\" : \"khalid@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example Reques for Login API test",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"janedoe123\",\r\n    \"email\" : \"janedoe@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "268"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10c-J6wqHB2AwRDFt2xsKVVBsQUnHh4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 12:20:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"6593ff8969c0fecaf1e2c7be\",\n    \"username\": \"John Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTNmZjg5NjljMGZlY2FmMWUyYzdiZSIsImlhdCI6MTcwNDE5ODA0NiwiZXhwIjoxNzA0Mjg0NDQ2fQ.zclLt_cWyiIgeHZ1BcVEcGkJmumkOSZ5yB1vF4LvENM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New ToDo creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTNjYWJmMWVjYjdjMjc5MjNmNjYxMyIsImlhdCI6MTcwNDE5NDc4MiwiZXhwIjoxNzA0MjgxMTgyfQ.XaRTSqucf2aW_GtloW3igZmwoObZ8Yw-UkYln3RoGzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"6593cabf1ecb7c27923f6613\",\r\n    \"todo\" : \"Task - 5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example for New ToDo creation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"6593ff8969c0fecaf1e2c7be\",\r\n    \"todo\" : \"To Work on Improving my React and Node concepts\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "301"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12d-C35NZZBCUafAXSHBti4gQcHvSCM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 12:25:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ToDo created succesfully\",\n    \"todo\": {\n        \"todo\": \"To Work on Improving my MongoDB concepts\",\n        \"createdUser\": \"6593ff8969c0fecaf1e2c7be\",\n        \"createdUserName\": \"John Doe\",\n        \"isDone\": false,\n        \"_id\": \"659400ab69c0fecaf1e2c7c7\",\n        \"createdAt\": \"2024-01-02T12:25:15.356Z\",\n        \"updatedAt\": \"2024-01-02T12:25:15.356Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit a ToDo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTNjYWJmMWVjYjdjMjc5MjNmNjYxMyIsImlhdCI6MTcwNDE5NDc4MiwiZXhwIjoxNzA0MjgxMTgyfQ.XaRTSqucf2aW_GtloW3igZmwoObZ8Yw-UkYln3RoGzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"updatedToDo\" : \"Task - 8\",\r\n    \"status\" : \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/edit/6593f20f3ffc176aa9515b1b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"edit",
+						"6593f20f3ffc176aa9515b1b"
+					],
+					"query": [
+						{
+							"key": "todoID",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit a ToDo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updatedToDo\" : \"Task - 8\",\r\n    \"status\" : \"done\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/edit/6593f20f3ffc176aa9515b1b",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"edit",
+								"6593f20f3ffc176aa9515b1b"
+							],
+							"query": [
+								{
+									"key": "todoID",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "263"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"107-WphjVJMYa/pD9rVyWRclCw0ROXo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 12:01:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ToDo Updated!\",\n    \"updatedTodo\": {\n        \"_id\": \"6593f20f3ffc176aa9515b1b\",\n        \"todo\": \"Task - 8\",\n        \"createdUser\": \"6593d30730e27464e5ff8a9a\",\n        \"createdUserName\": \"Khalid\",\n        \"isDone\": false,\n        \"createdAt\": \"2024-01-02T11:22:55.090Z\",\n        \"updatedAt\": \"2024-01-02T12:01:30.867Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Deleting a single todo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/delete/6593f2c83ffc176aa9515b1f",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"delete",
+								"6593f2c83ffc176aa9515b1f"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-DIYPLm2D+mkvH+NLdl71+4YzCeA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 12:10:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Delete All ToDo's",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"6593ff8969c0fecaf1e2c7be\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/deleteAll/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"deleteAll",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-UyE3BVwgWr0/cWO+O/IEGluyb0c\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 12:29:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"All todo's have been deleted\"\n}"
+				}
+			]
+		}
+	]
+}
