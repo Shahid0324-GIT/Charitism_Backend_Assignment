@@ -61,10 +61,17 @@ const getAllTodos = async (req, res) => {
     const allTodos = await todoModel
       .find({ createdUser: userId })
       .select("todo");
-    res.status(200).json({
-      message: "All your ToDo's",
-      todos: allTodos,
-    });
+
+    if (allTodos.length > 0) {
+      res.status(200).json({
+        message: "All your ToDo's",
+        todos: allTodos,
+      });
+    } else {
+      res.status(200).json({
+        message: "No ToDo's Found. Create a new todo",
+      });
+    }
   } catch (error) {
     res.status(400).json({
       message: error.message,
@@ -141,6 +148,10 @@ const deleteATodo = async (req, res) => {
       message: error.message,
     });
   }
+
+  // res.status(200).json({
+  //   message: "ToDo Deleted Successfully!",
+  // });
 };
 
 const deleteAllTodo = async (req, res) => {
@@ -167,6 +178,10 @@ const deleteAllTodo = async (req, res) => {
       message: error.message,
     });
   }
+
+  // res.status(200).json({
+  //   message: "All todo's have been deleted",
+  // });
 };
 
 module.exports = {

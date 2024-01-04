@@ -1,0 +1,724 @@
+{
+	"info": {
+		"_postman_id": "503eda6b-ec82-4ae7-81e6-b97118ecac2b",
+		"name": "Charitism API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26521674"
+	},
+	"item": [
+		{
+			"name": "Charitism Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"John Doe\",\r\n    \"password\": \"johndoe\",\r\n    \"email\" : \"johndoe@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Charitism Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"John Doe\",\r\n    \"password\": \"johndoe\",\r\n    \"email\" : \"johndoe@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-Awo+uzfL9RnR0zrYmHNyecYoDcM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:31:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"John Doe\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQzNzg3MTEsImV4cCI6MTcwNDQ2NTExMX0.CncnFgfRE7Gi2d5RMfXM1_I-ayu7nO4ZUJ5tpikuwSQ\",\n    \"email\": \"johndoe@mail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Charitism Login API test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTNjYWJmMWVjYjdjMjc5MjNmNjYxMyIsImlhdCI6MTcwNDE5MDE0MCwiZXhwIjoxNzA0Mjc2NTQwfQ.Qyzke7oL7Yrl7bTfB5zwUQek3hDMVAvVCSjNwaMylbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"johndoe\",\r\n    \"email\" : \"johndoe@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Charitism Login API test",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"johndoe\",\r\n    \"email\" : \"johndoe@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "268"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10c-uE3iJf4c5AN33Ploabro1mXcDWI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:33:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"6596c1579c807fe0b9fb0a83\",\n    \"username\": \"John Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New ToDo creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"6596c1579c807fe0b9fb0a83\",\r\n    \"todo\" : \"Gluten and cream.\",\r\n    \"status\" : \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New ToDo creation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"6596c1579c807fe0b9fb0a83\",\r\n    \"todo\" : \"Gluten and cream.\",\r\n    \"status\" : \"Pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "282"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11a-Yg4W+2JVaBIRBmLcn+DBVxf/skc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:39:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ToDo created succesfully\",\n    \"todo\": {\n        \"todo\": \"Gluten and cream.\",\n        \"createdUser\": \"6596c1579c807fe0b9fb0a83\",\n        \"createdUserName\": \"John Doe\",\n        \"status\": \"Pending\",\n        \"_id\": \"6596c31d9c807fe0b9fb0a98\",\n        \"createdAt\": \"2024-01-04T14:39:25.943Z\",\n        \"updatedAt\": \"2024-01-04T14:39:25.943Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit a ToDo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"updatedToDo\" : \"Bought The cake flour\",\r\n    \"status\" : \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/edit/6596c2de9c807fe0b9fb0a8c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"edit",
+						"6596c2de9c807fe0b9fb0a8c"
+					],
+					"query": [
+						{
+							"key": "todoID",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit a ToDo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updatedToDo\" : \"Bought The cake flour\",\r\n    \"status\" : \"done\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/edit/6596c2de9c807fe0b9fb0a8c",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"edit",
+								"6596c2de9c807fe0b9fb0a8c"
+							],
+							"query": [
+								{
+									"key": "todoID",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-oHAKdL8Sq42YcwbdN92CTVQk0x4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:43:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ToDo Updated!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Deleting a single todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/delete/6596c2fd9c807fe0b9fb0a90",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"delete",
+						"6596c2fd9c807fe0b9fb0a90"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Deleting a single todo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/delete/6596c2fd9c807fe0b9fb0a90",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"delete",
+								"6596c2fd9c807fe0b9fb0a90"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-7kGPQE9QVrLc5mOmlM0iA3D1ojg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:53:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ToDo Deleted Successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete All ToDo's",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6596c1579c807fe0b9fb0a83\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/deleteAll/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"deleteAll",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete All ToDo's",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"6596c1579c807fe0b9fb0a83\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/deleteAll/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"deleteAll",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-UyE3BVwgWr0/cWO+O/IEGluyb0c\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:56:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"All todo's have been deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetching All The ToDo's Of a user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"6596c1579c807fe0b9fb0a83\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api_v1/todo/fetchalltodos",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api_v1",
+						"todo",
+						"fetchalltodos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetching All The ToDo's Of a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"6596c1579c807fe0b9fb0a83\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api_v1/todo/fetchalltodos",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api_v1",
+								"todo",
+								"fetchalltodos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "388"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"184-sjLaererxlNvGkxVzh48ZJ+Mn1k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jan 2024 14:47:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"All your ToDo's\",\n    \"todos\": [\n        {\n            \"_id\": \"6596c2549c807fe0b9fb0a88\",\n            \"todo\": \"Bake the cake.\"\n        },\n        {\n            \"_id\": \"6596c2de9c807fe0b9fb0a8c\",\n            \"todo\": \"Bought The cake flour\"\n        },\n        {\n            \"_id\": \"6596c2fd9c807fe0b9fb0a90\",\n            \"todo\": \"Restocking the chici powder and vanilla essence.\"\n        },\n        {\n            \"_id\": \"6596c30d9c807fe0b9fb0a94\",\n            \"todo\": \"Bringing the cake paper.\"\n        },\n        {\n            \"_id\": \"6596c31d9c807fe0b9fb0a98\",\n            \"todo\": \"Gluten and cream.\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
