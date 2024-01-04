@@ -2,7 +2,18 @@ const todoModel = require("../models/todoModel");
 const CharitismUser = require("../models/userModel");
 
 const createTodo = async (req, res) => {
-  const { userId, todo } = req.body;
+  const { userId, todo, status } = req.body;
+
+  /*
+
+  request body: 
+  {
+    'userId': "....",
+    "todo" : "....",
+    "status" : "....",
+  }
+
+  */
 
   if (!userId) {
     console.log("UserId param not sent with the request");
@@ -19,6 +30,7 @@ const createTodo = async (req, res) => {
       todo,
       createdUser: createdUserdetails,
       createdUserName: username,
+      status,
     });
 
     res.status(200).json({
@@ -34,6 +46,16 @@ const createTodo = async (req, res) => {
 
 const getAllTodos = async (req, res) => {
   const { userId } = req.body;
+
+  /*
+
+  request body: 
+  {
+    'userId': "....",
+   
+  }
+
+  */
 
   try {
     const allTodos = await todoModel
@@ -52,12 +74,23 @@ const getAllTodos = async (req, res) => {
 
 const editTodo = async (req, res) => {
   const { todoId } = req.params;
-  const { updatedToDo } = req.body;
+  const { updatedToDo, status } = req.body;
+
+  /*
+
+  request body: 
+  {
+    'todoId': "....",
+    "updatedToDo" : "....",
+    "status" : "...."
+  }
+
+  */
 
   try {
     const updatedTodo = await todoModel.findByIdAndUpdate(
       { _id: todoId },
-      { todo: updatedToDo },
+      { todo: updatedToDo, status },
       { new: true }
     );
     console.log(updatedTodo);
@@ -65,11 +98,10 @@ const editTodo = async (req, res) => {
     if (updatedToDo) {
       res.status(201).json({
         message: "ToDo Updated!",
-        updatedTodo,
       });
     } else {
       res.status(404).json({
-        message: "No ToDO Found",
+        message: "No ToDo Found",
       });
     }
   } catch (error) {
@@ -81,6 +113,16 @@ const editTodo = async (req, res) => {
 
 const deleteATodo = async (req, res) => {
   const { todoId } = req.params;
+
+  /*
+
+  request body: 
+  {
+    'todoId': "....",
+  
+  }
+
+  */
 
   try {
     const result = await todoModel.findByIdAndDelete({ _id: todoId });
@@ -103,6 +145,16 @@ const deleteATodo = async (req, res) => {
 
 const deleteAllTodo = async (req, res) => {
   const { userId } = req.body;
+
+  /*
+
+  request body: 
+  {
+    'userId': "....",
+  
+  }
+
+  */
 
   try {
     const result = await todoModel.deleteMany({ createdUser: userId });

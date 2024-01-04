@@ -17,7 +17,7 @@ const todoModel = new Schema(
       type: String,
     },
 
-    isDone: { type: Boolean, default: false },
+    status: { type: String, default: "Pending" },
   },
   { timestamps: true }
 );

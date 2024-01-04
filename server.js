@@ -26,7 +26,7 @@ app.use(express.json());
 app.use("/api_v1/user", userRoutes);
 app.use("/api_v1/todo", todoRoutes);
 
-app.get("/", (req, res) => {
+app.get("/api_v1", (req, res) => {
   res.send("<h1>Welcome to the ToDo App <br/>--Assignment for Charitism</h1>");
 });
 
