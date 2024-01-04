@@ -36,10 +36,10 @@
 
   #### Request:
 
-  - {
-    "password": "johndoe",
-    "email" : "johndoe@mail.com"
-    }
+      - {
+        "password": "johndoe",
+        "email" : "johndoe@mail.com"
+        }
 
   #### Response:
 
