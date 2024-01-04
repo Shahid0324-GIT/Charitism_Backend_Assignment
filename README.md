@@ -18,19 +18,19 @@
 
   #### Request:
 
-  - {
-    "username" : "John Doe",
-    "password": "johndoe",
-    "email" : "johndoe@mail.com"
-    }
+      - {
+        "username" : "John Doe",
+        "password": "johndoe",
+        "email" : "johndoe@mail.com"
+        }
 
   #### Response:
 
-  - {
-    "username": "John Doe",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQzNzg3MTEsImV4cCI6MTcwNDQ2NTExMX0.CncnFgfRE7Gi2d5RMfXM1_I-ayu7nO4ZUJ5tpikuwSQ",
-    "email": "johndoe@mail.com"
-    }
+      - {
+        "username": "John Doe",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQzNzg3MTEsImV4cCI6MTcwNDQ2NTExMX0.CncnFgfRE7Gi2d5RMfXM1_I-ayu7nO4ZUJ5tpikuwSQ",
+        "email": "johndoe@mail.com"
+        }
 
 - ### Login:
 
@@ -43,47 +43,47 @@
 
   #### Response:
 
-  - {
-    "userId": "6596c1579c807fe0b9fb0a83",
-    "username": "John Doe",
-    "email": "johndoe@mail.com",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E"
-    }
+      - {
+        "userId": "6596c1579c807fe0b9fb0a83",
+        "username": "John Doe",
+        "email": "johndoe@mail.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZjMTU3OWM4MDdmZTBiOWZiMGE4MyIsImlhdCI6MTcwNDM3ODgyMiwiZXhwIjoxNzA0NDY1MjIyfQ.Lw432FlY1dJ5EfxyiFxrpeJ-qVIEnsuY_zfJfP_MA0E"
+        }
 
 - ### Creating a ToDo after a succesful login:
 
   #### Request:
 
-  - {
-    "userId" : "6596c1579c807fe0b9fb0a83",
-    "todo" : "Bake the cake.",
-    "status" : "Pending"
-    }
+      - {
+        "userId" : "6596c1579c807fe0b9fb0a83",
+        "todo" : "Bake the cake.",
+        "status" : "Pending"
+        }
 
   #### Response:
 
-  - {
-    "message": "ToDo created succesfully",
-    "todo": {
-    "todo": "Bake the cake.",
-    "createdUser": "6596c1579c807fe0b9fb0a83",
-    "createdUserName": "John Doe",
-    "status": "Pending",
-    "\_id": "6596c2549c807fe0b9fb0a88",
-    "createdAt": "2024-01-04T14:36:04.093Z",
-    "updatedAt": "2024-01-04T14:36:04.093Z",
-    "\_\_v": 0
-    }
-    }
+      - {
+        "message": "ToDo created succesfully",
+        "todo": {
+        "todo": "Bake the cake.",
+        "createdUser": "6596c1579c807fe0b9fb0a83",
+        "createdUserName": "John Doe",
+        "status": "Pending",
+        "\_id": "6596c2549c807fe0b9fb0a88",
+        "createdAt": "2024-01-04T14:36:04.093Z",
+        "updatedAt": "2024-01-04T14:36:04.093Z",
+        "\_\_v": 0
+        }
+        }
 
 - ### Editing a ToDo:
 
   #### Request (Must Provide the appropriate todoId):
 
-  - {
-    "updatedToDo" : "Bought The cake flour",
-    "status" : "done"
-    }
+      - {
+        "updatedToDo" : "Bought The cake flour",
+        "status" : "done"
+        }
 
   - ##### ToDo before Editing:
 
@@ -108,9 +108,9 @@
 
   #### Response:
 
-  - {
-    "message": "ToDo Updated!"
-    }
+      - {
+        "message": "ToDo Updated!"
+        }
 
   - ##### ToDo after Editing:
 
@@ -137,37 +137,37 @@
 
   #### Request (Must provide the userId in the request):
 
-  - {
-    "userId" : "6596c1579c807fe0b9fb0a83",
-    }
+      - {
+        "userId" : "6596c1579c807fe0b9fb0a83",
+        }
 
   #### Response:
 
-  - {
-    "message": "All your ToDo's",
-    "todos": [
-    {
-    "_id": "6596c2549c807fe0b9fb0a88",
-    "todo": "Bake the cake."
-    },
-    {
-    "_id": "6596c2de9c807fe0b9fb0a8c",
-    "todo": "Bought The cake flour"
-    },
-    {
-    "_id": "6596c2fd9c807fe0b9fb0a90",
-    "todo": "Restocking the chici powder and vanilla essence."
-    },
-    {
-    "_id": "6596c30d9c807fe0b9fb0a94",
-    "todo": "Bringing the cake paper."
-    },
-    {
-    "_id": "6596c31d9c807fe0b9fb0a98",
-    "todo": "Gluten and cream."
-    }
-    ]
-    }
+      - {
+        "message": "All your ToDo's",
+        "todos": [
+        {
+        "_id": "6596c2549c807fe0b9fb0a88",
+        "todo": "Bake the cake."
+        },
+        {
+        "_id": "6596c2de9c807fe0b9fb0a8c",
+        "todo": "Bought The cake flour"
+        },
+        {
+        "_id": "6596c2fd9c807fe0b9fb0a90",
+        "todo": "Restocking the chici powder and vanilla essence."
+        },
+        {
+        "_id": "6596c30d9c807fe0b9fb0a94",
+        "todo": "Bringing the cake paper."
+        },
+        {
+        "_id": "6596c31d9c807fe0b9fb0a98",
+        "todo": "Gluten and cream."
+        }
+        ]
+        }
 
 - ### Deleting a Single ToDo:
 
@@ -183,12 +183,12 @@
 
   #### Request:
 
-  - {
-    "userId": "6596c1579c807fe0b9fb0a83"
-    }
+      - {
+        "userId": "6596c1579c807fe0b9fb0a83"
+        }
 
   #### Response:
 
-  - {
-    "message": "All todo's have been deleted"
-    }
+      - {
+        "message": "All todo's have been deleted"
+        }
