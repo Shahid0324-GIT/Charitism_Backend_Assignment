@@ -38,7 +38,6 @@ const userRegistration = async (req, res) => {
     res.status(200).json({
       userId: newUser.userId,
       username: newUser.username,
-      token: generateToken(newUser.userId),
       email: newUser.email,
     });
   } else {
