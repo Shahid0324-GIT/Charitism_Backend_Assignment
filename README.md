@@ -28,7 +28,6 @@
 
       - {
         "username": "John Doe",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQzNzg3MTEsImV4cCI6MTcwNDQ2NTExMX0.CncnFgfRE7Gi2d5RMfXM1_I-ayu7nO4ZUJ5tpikuwSQ",
         "email": "johndoe@mail.com"
         }
 
